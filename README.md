@@ -1,5 +1,5 @@
 # aws-basic-config
-A server topography covering most basic features.
+A server topology covering most basic features.
 
 #### Installation
 
