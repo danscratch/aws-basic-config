@@ -11,8 +11,8 @@ Before you run `terraform` to create your infrastructure, you need to complete t
 
 1. Register a domain (e.g., `everythingisawesome.com`).
 1. Sign up for AWS.
-1. Request a cert in the AWS certificate manager. This terraform configuration expects you to have a wildcard cert (e.g., `*.everythingisawesome.com`). Note that you will need to be able to confirm ownership of the site through an email. Once you've created this cert, note the "arn" value - you'll use it below.
-1. Create a keypair (e.g., `everythingisawesome-keypair`) on the AWS EC2 page. This will download a PEM file to your computer. The easiest thing to do at this point is to move this to your `~/.ssh` directory and add it to your `ssh-agent`.
+1. Request a cert in the AWS certificate manager. This terraform configuration expects you to have a wildcard cert (e.g., `*.everythingisawesome.com`). Note that you will need to be able to confirm ownership of the site by clicking a link in an email. Once you've created this cert, note the "arn" value - you'll use it below.
+1. Create a keypair (e.g., `everythingisawesome-keypair`) on the AWS EC2 page. This will download a PEM file to your computer. Move the PEM file to your `~/.ssh` directory and add it to your `ssh-agent`. Note that this isn't a good solution for a production system, but will do for a test system. Also, note that you can't get another copy of the PEM file from AWS, so you should save it someplace safe and secure.
   ```
 cd ~/Downloads
 mv everythingisawesome-keypair.pem ~/.ssh
