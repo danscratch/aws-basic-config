@@ -64,3 +64,7 @@ terraform destroy
 **Note**: You may have to manually delete the CloudFront distribution in AWS after the fact, since it takes it so friggin' long to turn it off that `terraform` doesn't always succeed in deleting it.
 
 ![infrastructure](infrastructure.png)
+
+### License
+
+This framework is made available under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) license.
