@@ -61,7 +61,7 @@ EOF
 resource "aws_elb" "prod" {
   name = "${var.domain_name}-prod-elb"
 
-  subnets         = ["${aws_subnet.subnet_east_1b.id}", "${aws_subnet.subnet_east_1c.id}"]
+  subnets         = ["${aws_subnet.subnet_east_1b.id}"]
   security_groups = ["${aws_security_group.world_visible_lb.id}"]
   instances       = ["${aws_instance.web.id}"]
 

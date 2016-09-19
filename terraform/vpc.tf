@@ -38,16 +38,6 @@ resource "aws_subnet" "subnet_east_1b" {
   }
 }
 
-resource "aws_subnet" "subnet_east_1c" {
-  vpc_id                  = "${aws_vpc.default.id}"
-  cidr_block              = "10.0.10.0/24"
-  map_public_ip_on_launch = true
-  availability_zone       = "us-east-1c"
-  tags {
-    Name = "${var.domain_name}-subnet-east-1c"
-  }
-}
-
 # A security group for the ELB so it is accessible via the web
 resource "aws_security_group" "world_visible_lb" {
   name        = "world_visible_lb"
